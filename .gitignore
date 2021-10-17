@@ -1,0 +1,7 @@
+node_modules
+bin
+obj
+.DS_Store
+.git
+packages
+.vs
