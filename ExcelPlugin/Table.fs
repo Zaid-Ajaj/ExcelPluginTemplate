@@ -25,13 +25,6 @@ type Table =
         |> Option.map (fun date -> date.ToString("o"))
         |> Table.cell
 
-    static member inline create (headers: string list) (rows: Cell list list) =
-        array2D [|
-            [| for header in headers -> box header |]
-            for row in rows do
-                [| for value in row -> Cell.Raw value |]
-        |]
-
     static member inline scalar cell =
         array2D [|
             [| Cell.Raw cell |]
